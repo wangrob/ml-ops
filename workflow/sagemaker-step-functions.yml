@@ -13,7 +13,7 @@ Resources:
       FunctionName: lambdaModelTrain
       Description: Lambda Model Train
       Handler: lambda_function.lambda_handler
-      Runtime: python3.6
+      Runtime: python3.9
       Role: !GetAtt LambdaBasicExecutionRole.Arn
       Code:
         S3Bucket: mrtdomshare
@@ -30,7 +30,7 @@ Resources:
       FunctionName: lambdaModelPredict
       Description: Lambda Model Predict
       Handler: lambda_function.lambda_handler
-      Runtime: python3.6
+      Runtime: python3.9
       Role: !GetAtt LambdaBasicExecutionRole.Arn
       Timeout: 900
       MemorySize: 1024
@@ -47,7 +47,7 @@ Resources:
       FunctionName: lambdaModelDeploy
       Description: Lambda Model Deploy
       Handler: lambda_function.lambda_handler
-      Runtime: python3.6
+      Runtime: python3.9
       Role: !GetAtt LambdaBasicExecutionRole.Arn
       Code:
         S3Bucket: mrtdomshare
@@ -62,7 +62,7 @@ Resources:
       FunctionName: lambdaModelAwait
       Description: Lambda Model Await
       Handler: lambda_function.lambda_handler
-      Runtime: python3.6
+      Runtime: python3.9
       Role: !GetAtt LambdaBasicExecutionRole.Arn
       Code:
         S3Bucket: mrtdomshare
@@ -74,7 +74,7 @@ Resources:
       FunctionName: lambdaRunCrawler
       Description: Lambda Run Crawler
       Handler: lambda_function.lambda_handler
-      Runtime: python3.6
+      Runtime: python3.9
       Role: !GetAtt LambdaBasicExecutionRole.Arn
       Timeout: 900
       Code:
@@ -87,7 +87,7 @@ Resources:
       FunctionName: lambdaCrawlerAwait
       Description: Lambda Await Crawler
       Handler: lambda_function.lambda_handler
-      Runtime: python3.6
+      Runtime: python3.9
       Role: !GetAtt LambdaBasicExecutionRole.Arn
       Code:
         S3Bucket: mrtdomshare
